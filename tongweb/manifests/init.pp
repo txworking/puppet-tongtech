@@ -10,13 +10,13 @@ class tongweb::params {
 		 path => "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
 	     cwd => "/etc",
 	     }
-	/*
+	
 	exec { "apt-update":
         command => "/usr/bin/apt-get update",
 		path => "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
         require => Exec["add_nameserver"],
       }
-	*/
+	
 	package { "openjdk-6-jdk":
 		ensure => "installed",
 		#require => Exec["apt-update"],
